@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 void somaMatrizes(int m, int MatrizA[][m], int MatrizB[][m], int MatrizC[][m]) {
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < m; j++) {
