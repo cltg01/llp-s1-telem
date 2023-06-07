@@ -4,18 +4,18 @@ int main() {
 
   FILE *arquivo;
   arquivo = fopen("arq.txt", "w");
-  char T;
+  char t;
 
   if (arquivo != NULL) {
 
     while (1) {
       printf("Entre com um caractere: ");  
-      scanf(" %c\n", &T);
-      if(T == '0'){
+      scanf(" %c\n", &t);
+      if(t == '0'){
         break;
         printf("arquivo gravado com sucesso! \n");
       }
-        fprintf(arquivo, "%c", T);
+        fprintf(arquivo, "%c", t);
     }
 
     fclose(arquivo);
@@ -25,8 +25,8 @@ int main() {
   arquivo = fopen("arq.txt", "r");
   if (arquivo != NULL) {
     printf("Conteudo do arquivo!\n");
-    while ((T = fgetc(arquivo)) != EOF) {
-      printf("%c", T);
+    while ((t = fgetc(arquivo)) != EOF) {
+      printf("%c", t);
     }
   }
   fclose(arquivo);
