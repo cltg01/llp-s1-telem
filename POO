@@ -1,0 +1,48 @@
+package arremesso;
+public interface Arremessavel {
+void arremessar();
+}
+package arremesso;
+public abstract class Bola implements Arremessavel {
+public String marca;
+public void quicar() {
+System.out.println("Bola quicando.");
+};
+}
+package arremesso;
+public class Pedra implements Arremessavel {
+@Override
+public void arremessar() {
+System.out.println("Pedra arremessada.");
+}
+}
+package arremesso;
+public class Beisebol extends Bola {
+@Override
+public void arremessar() {
+System.out.println("Bola de beisebol arremessada.");
+}
+@Override
+public void quicar() {
+System.out.println("Bola de beisebol quicou.");
+}
+}
+package arremesso;
+public class Futebol extends Bola {
+@Override
+public void arremessar() {
+System.out.println("Bola de futebol arremessada.");
+}
+@Override
+public void quicar() {
+System.out.println("Bola de futebol quicou.");
+}
+}
+package arremesso;
+public class Main {
+public static void main(String[] args) {
+Futebol bolaFut = new Futebol();
+bolaFut.arremessar();
+bolaFut.marca = "Nike";
+}
+}
